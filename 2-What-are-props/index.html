@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>React Tutorial</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let root = document.getElementById("root");
+        // let el = React.createElement("h1", null, "Anil Gunjal");
+        let el = React.createElement("h1", {textvalue:"Anil Gunjal", titlevalue:"Anil Gunjal Title"});
+        console.log(el);
+        ReactDOM.render(el, root); // Render needs to thing 1. new element 2. target element
+    </script>
+</body>
+</html>
+
+<!-- 
+
+    Props is nothing but the attirbutes in HTML like id, class and in React props can be anything not just id or class
+    Props name should be lowercase
+    
+ -->

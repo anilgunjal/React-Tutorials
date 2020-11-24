@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React Tutorial</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let root = document.getElementById("root");
+        // let innerSpan = React.createElement("span", null, "Span Text");
+        // let el = React.createElement("h1", null, innerSpan);
+        // console.log(el);
+        let myele  = <div>Hello JSX</div>;
+        ReactDOM.render(myele, root); // Render needs to thing 1. new element 2. target element
+    </script>
+</body>
+</html>
+
+<!-- 
+    We are passing the element as a props in another element
+    <div>
+        <h1>
+            <span></span>
+        </h1>
+    </div>
+    So If you want to do the hierachy code then we have to write a lot of code for it and will get program messy so that we use JSX
+    
+    JSX is HTML inside javascript
+
+    To render the JSX(HTML code on script) code we need a help from bable js and mention script type like type="text/babel"
+
+    Bable will convert the javascript into the browser 
+
+    So using JSX we don't need to mention createElement and pass element as a prop to other element. we can directly use HTML tag inside javascript
+ -->
