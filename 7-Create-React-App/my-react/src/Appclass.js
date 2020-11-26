@@ -4,26 +4,42 @@ import './App.css';
 class Appclass extends React.Component {
   constructor(props){
     super(props)
-    this.state = {isShow:true};
+    this.state = {name:"Madhu Gunjal", isShow:true};
     this.handleClick = this.handleClick.bind(this);
-    // states are immutable means you can't change the state directly
+    console.log("constructor");
   }
 
   // handleClick = () =>{
   //   this.setState({isShow:!this.state.isShow});
   // }
     
-  // if we use the Norman function handliClick(){} then it will give the error like can not read property setState of undefined because function won't getting isShow.
-  // To solve this we are using bind function, for Arrow function not needed the bind function.
+  componentDidMount(){
+    console.log("mounted");
+    this.setState({name:"ANil Gunjal"})
+  } 
+
+  // component did mount means when all the components like all tags gets created then this function gets called.
+  // here name value before component mount was a Madhu Gunjal but after component gets rendered then componentDidMount changes its value and new value become ANil Gunjal.
+
+  // console O/P =>
+  // constructor
+  // render
+  // mounted
+  // render
+
+  // when we modify the state value then again component gets re-render 
+
 
   handleClick(){
     this.setState({isShow:!this.state.isShow});
   }
   render() {
+    console.log("render");
     return (
       <div className="mainDiv">
         <div className="textDiv">
           <h3>Onclick Event</h3>
+          <h3>Name = {this.state.name }</h3>
           <button onClick={this.handleClick}>Toggle</button>
         </div>
         { this.state.isShow ? (<img src="https://images.unsplash.com/photo-1604423203943-54721eff418a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80" />) : null}
