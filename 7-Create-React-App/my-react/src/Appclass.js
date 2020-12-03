@@ -29,6 +29,19 @@ class Appclass extends React.Component {
 
   // when we modify the state value then again component gets re-render 
 
+  componentWillMount(){
+    console.log("will mount");
+    this.setState({name:"Nandu Gunjal"})
+  } 
+
+  // component will mount means before all the components like all tags gets created then this function gets called.
+  
+  // console O/P =>
+  // constructor
+  // will mount
+  // render
+  // mounted
+  // render
 
   handleClick(){
     this.setState({isShow:!this.state.isShow});
